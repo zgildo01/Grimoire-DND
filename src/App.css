@@ -27,7 +27,7 @@ body {
   justify-content: center;
 }
 
-#classDiv {
+.class-div {
   border: 1px solid black;
   width: 125px;
   display: grid;
