@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'
 import { getClassList } from '../../services/api-calls';
 
 const ClassList = () => {
@@ -18,15 +18,17 @@ const ClassList = () => {
       <div>
         <h3>Class List</h3>
         <div className="icon-container">
-          {classes.map(classTitle => 
-            <div className="class-div" key={classTitle.index}>
-              <img 
-								style={{ width: "100px", height: "100px" }}
-								src={`/images/${classTitle.name}.svg`} 
-								alt="class-logo"
-							/>
-              {classTitle.name}
-            </div>
+          {classes.map(classTitle =>
+            <Link key={classTitle.index} to="/class" state={{ classTitle }} >
+              <div className="class-div" >
+                <img 
+                  style={{ width: "100px", height: "100px" }}
+                  src={`/images/${classTitle.name}.svg`} 
+                  alt="class-logo"
+                />
+                {classTitle.name}
+              </div>
+            </Link>
           )}
         </div>
       </div>
