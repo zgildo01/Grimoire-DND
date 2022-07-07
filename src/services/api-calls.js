@@ -7,6 +7,7 @@ export async function getClassList() {
 
 export async function getDetails(apiUrl) {
   const res = await fetch(`${baseUrl}${apiUrl}`)
+  console.log(res)
   return res.json()
 }
 

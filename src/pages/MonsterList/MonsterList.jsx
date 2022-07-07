@@ -5,7 +5,6 @@ import { getMonsterList } from "../../services/api-calls";
 const MonsterList = () => {
   const [monsterList, setMonsterList] = useState([])
 
-
   useEffect(() => {
     const fetchMonsterList = async () => {
       const monsterData = await getMonsterList()
