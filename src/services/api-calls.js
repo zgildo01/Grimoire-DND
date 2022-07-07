@@ -9,3 +9,8 @@ export async function getDetails(apiUrl) {
   const res = await fetch(`${baseUrl}${apiUrl}`)
   return res.json()
 }
+
+export async function getMonsterList() {
+  const res = await fetch(`${baseUrl}/api/monsters`)
+  return res.json()
+}
