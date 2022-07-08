@@ -5,6 +5,7 @@ import ClassList from './pages/ClassList/ClassList';
 import ClassDetails from './pages/ClassDetails/ClassDetails';
 import MonsterList from './pages/MonsterList/MonsterList'
 import MonsterDetails from './pages/MonsterDetails/MonsterDetails'
+import SpellSearch from './pages/SpellSearch/SpellSearch';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/class" element={<ClassDetails />} />
         <Route path="/monster-list" element={<MonsterList />} />
         <Route path="/monster" element={<MonsterDetails />} />
+        <Route path="/spell-search" element={<SpellSearch />} />
       </Routes>
     </>
   );
