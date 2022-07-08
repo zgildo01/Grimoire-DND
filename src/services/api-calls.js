@@ -20,3 +20,8 @@ export async function spellSearch(formData) {
   const res = await fetch(`${baseUrl}/api/spells/?name=${formData.query}`)
   return res.json()
 }
+
+export async function getSpellDetails(spellName) {
+  const res = await fetch(`${baseUrl}/api/spells/${spellName}`)
+  return res.json()
+}
